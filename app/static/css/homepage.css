@@ -1,11 +1,9 @@
-/* var text-decoration */
+
 @font-face {
   font-family: myfont;
   src: url(../fonts/ufonts.com_tw-cen-mt.ttf);
 }
-/*--
-    Common Css
---*/
+
 .imageAndText {position: relative;} 
 .imageAndText .col {position: absolute; z-index: 1; top: 90%; left: 70%;font-size: 24px;font-weight: bolder;}
 body {
@@ -13,12 +11,7 @@ body {
   font-size: 14px;
   font-weight: 400;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   margin: 0px;
   font-family: Poiret One;
 }
@@ -52,7 +45,6 @@ a:active {
   text-decoration: none !important;
   font-size: 15px;
 }
-/*============== Mixins style start ================*/
 .overlay-effect {
   content: "";
   position: absolute;
@@ -65,9 +57,6 @@ a:active {
   background: url("../images/overlay-pattern.png") #000000;
   opacity: 0.3;
 }
-/*--
-    custom heading Start
---*/
 .heading {
   text-align: center;
   font-weight: 500;
@@ -90,9 +79,6 @@ a:active {
   background: #C8C1B3;
   margin-left: -70px;
 }
-/*--
-    custom heading Start
---*/
 .title {
   color: #2E2E2E;
   text-transform: uppercase;
@@ -102,18 +88,11 @@ a:active {
   color: #ffa720;
 }
 
-/*--
-    transition custom style
---*/
 .transition {
   -webkit-transition: .3s all;
   -o-transition: .3s all;
   transition: .3s all;
 }
-/*============== Mixins style close ================*/
-/*--
-    header-img start Start
---*/
 #hero-area {
   position: relative;
 }
@@ -129,11 +108,6 @@ a:active {
   background: url("../images/overlay-pattern.png") #000000;
   opacity: 0.3;
 }
-/*--
-    nav Start
---*/
-
-
 
 nav {
   z-index: 99999;
@@ -216,9 +190,6 @@ nav .block .navbar-default .navbar-nav > .active > a:hover:before {
   height: 2px;
   background: #ff9632;
 }
-/*--
-    slider Start
---*/
 #slider {
   padding: 30px 0px;
 }
@@ -229,25 +200,6 @@ nav .block .navbar-default .navbar-nav > .active > a:hover:before {
   width: 200px;
 }
 
-/*--
-    about-us Start
---*/
-#about-us {
-  padding: 100px 0px;
-  background: #F6F6F6;
-}
-#about-us .block {
-  text-align: center;
-}
-#about-us .block p {
-  color: #959595;
-  font-size: 16px;
-  line-height: 26px;
-  padding: 40px 0px;
-}
-/*--
-    Search Start
---*/
 
 .triggers .search-trigger {
   display: inline-block;
@@ -291,9 +243,7 @@ nav .block .navbar-default .navbar-nav > .active > a:hover:before {
   color: #959595;
   transform: 1s;
 }
-/*#blog .block ul li:hover img {
-  transform: scale(1.2) rotate(10deg);
-}*/
+
 #blog .block ul li h3 {
   color: #323232;
   padding: 0px 40px 20px;
@@ -316,11 +266,16 @@ nav .block .navbar-default .navbar-nav > .active > a:hover:before {
 #blog .block ul li .blog-img {
   float: left;
   width: 50%;
-  height: 100%;
-  /*background: #ffa720;*/
+  height: auto;
+  max-height: 350px;
   overflow: hidden;
-  object-fit: cover;
 }
+
+#blog .block ul li .blog-img a img {
+  object-fit: contain;
+}
+
+
 
 
 #blog .block ul li .content-right {
@@ -343,28 +298,9 @@ nav .block .navbar-default .navbar-nav > .active > a:hover:before {
   height: 30px;
   margin-top: -15px;
   background: #fff;
-  /*transform: rotate(45deg);*/
   margin-left: -15px;
 }
-#blog .block ul li .content-left {
-  padding: 40px 35px 23px;
-  width: 50%;
-  height: 100%;
-  float: left;
-  position: relative;
-  z-index: 999;
-}
-#blog .block ul li .content-left:after {
-  content: "";
-  position: absolute;
-  right: -15px;
-  top: 50%;
-  width: 30px;
-  height: 30px;
-  margin-top: 0px;
-  background: #fff;
-  /*transform: rotate(45deg);*/
-}
+
 
 #blog .block .btn-more-info{
   padding: 28px 30px;
@@ -395,17 +331,13 @@ nav .block .navbar-default .navbar-nav > .active > a:hover:before {
   transition: .3s all;
 }
 
-
 #blog .block .btn-more-info:hover, .page-body .btn-more-info:hover {
   background: transparent;
   color: #ff9632;
   border: 1px solid #ff9632;
 }
 
-/*--
-    subscribe Start
---*/
-#subscribe {
+#about-us {
   padding: 100px 0px;
   text-align: center;
   background: url("../images/background-1.jpg");
@@ -414,7 +346,7 @@ nav .block .navbar-default .navbar-nav > .active > a:hover:before {
   background-size: cover;
   position: relative;
 }
-#subscribe:before {
+#about-us:before {
   content: "";
   position: absolute;
   left: 0;
@@ -424,17 +356,17 @@ nav .block .navbar-default .navbar-nav > .active > a:hover:before {
   width: 100%;
   height: 100%;
   background: url("../images/overlay-pattern.png") #000000;
-  opacity: 0.5;
+  opacity: 0.3;
 }
-#subscribe .block h1.heading {
+#about-us .block h1.heading {
   color: #fff;
 }
-#subscribe .block p {
+#about-us .block p {
   padding: 25px 0px;
   color: #fff;
   font-size: 18px;
 }
-#subscribe .block form .form-control {
+#about-us .block form .form-control {
   width: 450px;
   background: #fff;
   opacity: 0.9;
@@ -443,12 +375,12 @@ nav .block .navbar-default .navbar-nav > .active > a:hover:before {
   border-radius: 0px;
   font-size: 15px;
 }
-#subscribe .block form .input-group-addon {
+#about-us .block form .input-group-addon {
   padding: 0px;
   border: none;
   background: none;
 }
-#subscribe .block form .input-group-addon button {
+#about-us .block form .input-group-addon button {
   width: 212px;
   height: 65px;
   border: none;
@@ -463,12 +395,10 @@ nav .block .navbar-default .navbar-nav > .active > a:hover:before {
   -o-transition: .3s all;
   transition: .3s all;
 }
-#subscribe .block form .input-group-addon button:hover {
+#about-us .block form .input-group-addon button:hover {
   background: #ffac14;
 }
-/*--
-    contact-us Start
---*/
+
 #contact-us {
   padding: 70px 0px;
 }
@@ -519,9 +449,6 @@ nav .block .navbar-default .navbar-nav > .active > a:hover:before {
 .info {
   padding-bottom: 30px;
 }
-/*--
-    footer Start
---*/
 #footer {
   padding: 70px 0px;
 }
@@ -574,9 +501,6 @@ nav .block .navbar-default .navbar-nav > .active > a:hover:before {
   background: #ffa720;
   color: #fff;
 }
-/*--
-    more-info Start
---*/
 #footer-bottom {
   background: black;
   padding: 20px 0px;
@@ -602,20 +526,13 @@ nav .block .navbar-default .navbar-nav > .active > a:hover:before {
   font-family: Kalam;
   background-color: #fff35b;
   color: #f38a14;
-
 }
 
 .navbar-collapse ul li button:hover{
   font-family: Kalam;
   background-color: #ff9632;
   color: white;
-
 }
-
-
-
-
-/*============== recipe ================*/
 
 .page-head h1 {
   padding: 40px 0;
@@ -656,16 +573,12 @@ nav .block .navbar-default .navbar-nav > .active > a:hover:before {
   color: #ff9632;
 }
 
-
-
 .primary-content {
   padding: 10px 8% 30px 8%;
 }
 
 fieldset, label { margin: 0; padding: 0; }
 
-
-/****** Style Star Rating Widget *****/
 
 .rating {
   border: none;
@@ -691,15 +604,14 @@ fieldset, label { margin: 0; padding: 0; }
   float: right;
 }
 
-/***** CSS Magic to Highlight Stars on Hover *****/
 
-.rating > input:checked ~ label, /* show gold star when clicked */
-.rating:not(:checked) > label:hover, /* hover current star */
-.rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+.rating > input:checked ~ label,
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label { color: #FFD700;  }
 
-.rating > input:checked + label:hover, /* hover current star when changing rating */
+.rating > input:checked + label:hover,
 .rating > input:checked ~ label:hover,
-.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating > label:hover ~ input:checked ~ label,
 .rating > input:checked ~ label:hover ~ label { color: #FFED85;  }
 
 .rate {
@@ -723,3 +635,71 @@ fieldset, label { margin: 0; padding: 0; }
   color: #ff9632;
 }
 
+#reactClock {
+  text-align: center;
+}
+
+#app:not(:empty) + .sk-cube-grid {
+  display: none;
+}
+
+.sk-cube-grid {
+  width: 40px;
+  height: 40px;
+  margin: 100px auto;
+}
+
+.sk-cube-grid .sk-cube {
+  width: 33%;
+  height: 33%;
+  background-color: #333;
+  float: left;
+  animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+}
+
+.sk-cube-grid .sk-cube1 {
+  animation-delay: 0.2s;
+}
+
+.sk-cube-grid .sk-cube2 {
+  animation-delay: 0.3s;
+}
+
+.sk-cube-grid .sk-cube3 {
+  animation-delay: 0.4s;
+}
+
+.sk-cube-grid .sk-cube4 {
+  animation-delay: 0.1s;
+}
+
+.sk-cube-grid .sk-cube5 {
+  animation-delay: 0.2s;
+}
+
+.sk-cube-grid .sk-cube6 {
+  animation-delay: 0.3s;
+}
+
+.sk-cube-grid .sk-cube7 {
+  animation-delay: 0s;
+}
+
+.sk-cube-grid .sk-cube8 {
+  animation-delay: 0.1s;
+}
+
+.sk-cube-grid .sk-cube9 {
+  animation-delay: 0.2s;
+}
+
+@keyframes sk-cubeGridScaleDelay {
+  0%,
+  70%,
+  100% {
+    transform: scale3D(1, 1, 1);
+  }
+  35% {
+    transform: scale3D(0, 0, 1);
+  }
+}

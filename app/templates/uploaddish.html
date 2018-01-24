@@ -1,16 +1,8 @@
-
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
+<html class="no-js"> 
+<head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Upload</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
-    <meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
+    <title>{{title}}</title>
     <meta name="author" content="HELEN" />
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -19,25 +11,19 @@
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Kalam|Lekton|Lobster+Two|Indie+Flower|Poiret+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Kalam|Lekton|Lobster+Two|Indie+Flower|Poiret+One" rel="stylesheet">
 
-        <!-- Animate -->
+    <!-- Animate -->
     <link rel="stylesheet" href="{{url_for("static", filename='css/animate.css')}}">
     <!-- Icomoon -->
     <link rel="stylesheet" href="{{url_for("static", filename='css/icomoon.css')}}">
     <!-- Bootstrap  -->
     <link rel="stylesheet" href="{{url_for("static", filename='css/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{url_for("static", filename='css/style2.css')}}">
+    <link rel="stylesheet" href="{{url_for("static", filename='css/homepage.css')}}">
+    <link rel="stylesheet" href="{{url_for("static", filename='css/responsive.css')}}">
 
-    <link rel="stylesheet" href="{{url_for("static", filename='css/style.css')}}">
-        <link rel="stylesheet" href="{{url_for("static", filename='css/homepage.css')}}">
-        <link rel="stylesheet" href="{{url_for("static", filename='css/responsive.css')}}">
 
-    <!-- Modernizr JS -->
-    <script src="js/modernizr-2.6.2.min.js"></script>
-    <!-- FOR IE9 below -->
-    <!--[if lt IE 9]>
-    <script src="js/respond.min.js"></script>
-    <![endif]-->
     <script type="text/javascript">
     function readURL(input) {
         if (input.files && input.files[0]) {
@@ -88,21 +74,20 @@
                                 </div>
 
                                 <!-- Collect the nav links, forms, and other content for toggling -->
-                                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                                    <ul class="nav navbar-nav navbar-right" id="top-nav">
-                                        <li><a href="homepage.html">HOME</a></li>
-                                        <li><a href="#blog">SEARCH</a></li>
-                                  <li>
-                                {% if current_user.is_authenticated %}
-                                <a href="{{ url_for('auth.logout') }}">Log Out</a>
-                                {% else %}
-                                <a href="{{ url_for('auth.login') }}">Log In</a>
-                                {% endif %}
-                            </li>
+                                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                <ul class="nav navbar-nav navbar-right" id="top-nav">
 
-                                    </ul>
-                                </div><!-- /.navbar-collapse -->
-                            </div><!-- /.container-fluid -->
+                                    <li><a href="#hero-area">HOME</a></li>
+                                    <li><a href="#blog">SEARCH</a></li>
+                                                                    <li>
+                                  {% if current_user.is_authenticated %}
+                                  <button class="btn btn-default" onclick="window.location.href='{{ url_for('auth.logout') }}'">LOG OUT</button>
+                                     {% else %}
+                                     <button class="btn btn-default" onclick="window.location.href='{{ url_for('auth.login') }}'">LOG IN</button>
+                                    {% endif %}
+                              </li>
+                                </ul>
+                            </div><!-- /.navbar-collapse -->
                         </nav>
                     </div>
                 </div><!-- .col-md-12 close -->
@@ -115,33 +100,31 @@
         <div class="container">
         <hr>
             <div class="row">
-                <div class="col-md-7 col-md-push-1  probootstrap-animate" id="probootstrap-content">
+                <div class="col-md-7 col-md-push-1 probootstrap-animate" id="probootstrap-content">
                   <h2>Upload Your dish!</h2>
                   <br>
-                    <form action="#" method="post" class="probootstrap-form">
-                    <div class="form-group">
-                    <form id="form1" runat="server">
-                        <label for="subject">Image</label>
-                        <input type="file" onchange="readURL(this);" id="imgInp" accept=".jpg, .jpeg, .png" name="prl"/>
-                        <figure class="upload_img"><img id = "blah" alt="" /></figure>
+                    <form action="" method="post" enctype="multipart/form-data" class="probootstrap-form" runat="server">
+                        <div class="form-group">
+                            <label for="subject">Image</label>
+                            <input type="file" onchange="readURL(this);" id="imgInp" accept=".jpg, .jpeg, .png" name="prl"/>
+                            <figure class="upload_img"><img id = "blah" alt="" /></figure>
+                        </div>
+                        <div class="form-group">
+                          <label for="message">Comments</label>
+                          <textarea cols="30" rows="10" class="form-control" id="message" name="message"></textarea>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-primary btn-lg" id="submit" name="submit" value="Upload Your Dish!">
+                        </div>
                     </form>
-                    </div>
-                    <div class="form-group">
-                      <label for="message">Comments</label>
-                      <textarea cols="30" rows="10" class="form-control" id="message" name="message"></textarea>
-                    </div>
-                    <br>
-                    <div class="form-group">
-                      <input type="submit" class="btn btn-primary btn-lg" id="submit" name="submit" value="Upload Your Work" onclick="location.href='myspace.html'">
-                    </div>
-                  </form>
                 </div>
             </div>
         </div>
     </section>
 
-
-
+<!-- class="btn btn-primary btn-lg" id="submit" 
+ -->
 </div>
 
     <footer>

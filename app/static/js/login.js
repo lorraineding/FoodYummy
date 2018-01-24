@@ -1,5 +1,6 @@
 // AJAX code to check input field values when onblur event triggerd.
 function validate(field, query) {
+	console.log("yesss");
 	var xmlhttp;
 	if (window.XMLHttpRequest) { // for IE7+, Firefox, Chrome, Opera, Safari
 		xmlhttp = new XMLHttpRequest();
@@ -17,33 +18,25 @@ function validate(field, query) {
 	}
 	xmlhttp.open("POST", window.location.href, true);
 	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-	xmlhttp.send();
+	xmlhttp.send('email='+query);
 	}
 
 
 
 
 function checkForm() {
-// Fetching values from all input fields and storing them in variables.
-	var name = document.getElementById("username1").value;
-	var password = document.getElementById("password1").value;
-	var email = document.getElementById("email1").value;
-	var website = document.getElementById("website1").value;
-//Check input Fields Should not be blanks.
-	if (name == '' || password == '' || email == '' || website == '') {
-	alert("Fill All Fields");
-	} else {
-//Notifying error fields
-	var username1 = document.getElementById("username");
-	var password1 = document.getElementById("password");
-	var email1 = document.getElementById("email");
-var website1 = document.getElementById("website");
-//Check All Values/Informations Filled by User are Valid Or Not.If All Fields Are invalid Then Generate alert.
-if (username1.innerHTML == 'Must be 3+ letters' || password1.innerHTML == 'Password too short' || email1.innerHTML == 'Invalid email' || website1.innerHTML == 'Invalid website') {
-alert("Fill Valid Information");
-} else {
-//Submit Form When All values are valid.
-document.getElementById("myForm").submit();
-}
-}
-}
+	var email = document.getElementById("email").value;
+	var email1 = document.getElementById("err-1");
+	var password = document.getElementById("psw").value;
+	var password1 = document.getElementById("err-2");
+
+	if (password == ''){
+		password1.innerHTML = 'Password cannot be empty!'
+	} else if (email == ''){
+		email1.innerHTML = 'Please fill me in!'
+	} else{
+	//Submit Form When All values are valid.
+		document.getElementById("myForm").submit();
+		}
+	}
+

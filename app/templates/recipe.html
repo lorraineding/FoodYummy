@@ -35,6 +35,10 @@
     <script src="../static/js/wow.min.js"></script>
     <script src="../static/js/homepage.js"></script>
     <script src=" ../static/js/slick.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.1/babel.min.js"></script>
 </head>
 <body>
 <!--
@@ -61,7 +65,7 @@ Header start
                                     <span class="icon-bar"></span>
                                     <span class="icon-bar"></span>
                                 </button>
-                                <a class="navbar-brand" href="#">
+                                <a class="navbar-brand" href="{{url_for('main.index')}}">
                                     FOOD YUMMY
                                 </a>
 
@@ -72,8 +76,8 @@ Header start
                                 <ul class="nav navbar-nav navbar-right" id="top-nav">
 
 
-                                    <li><a href="myspace.html">HOME</a></li>
-                                    <li><a href="homepage.html">SEARCH</a></li>
+                                    <li><a href="{{url_for('main.dashboard')}}">HOME</a></li>
+                                    <li><a href="{{url_for('main.index')}}">SEARCH</a></li>
                                     
                                   <li>
                                   {% if current_user.is_authenticated %}
@@ -97,69 +101,64 @@ Header start
 <div class="container">
     <header>
         <div class="page-head wow fadeInUp" data-wow-duration="300ms" data-wow-delay="300ms">
-            <h1>Recipe: <span>Citrus Shortbread Cookies</span></h1>
+            <h1>Recipe: <span>{{ r.title }}</span></h1>
             <div class="profile">
-                <img class="img-responsive" src="../static/images/cat.jpg" alt="">
+                <img class="img-responsive" src="{{ r.author.avatar }}" alt="">
             </div>
 
             <div>
-                <h3>Recipe by: <a href="">Meow</a></h3>
-                <p>"This recipe was given to me by my mother-in-law, one of the best cooks I know...and given that we're from south Louisiana, that's saying something. With the chopped up dried cranberries, these are as pretty as they are tasty."</p>
+                <h3>Recipe by: <a href="">{{ r.author.username }}</a></h3>
+                <p>"{{ r.desc}}"</p>
             </div>
+
         </div>
 
     </header>
     <article>
         <div class="page-body wow fadeInUp" data-wow-duration="400ms" data-wow-delay="400ms">
-            <img class="img-responsive" src="../static/images/Citrus_Shortbread_Cookies.jpg" alt="">
+            <img class="img-responsive"  src={{ r.prl }} alt="">
             <div class="primary-content">
                 <div class="block">
                     <h3>Ingredients</h3>
-                    <p>
-                        3/4
-                        cup butter or margarine, softened
-                        1/4
-                        cup granulated sugar
-                        2
-                        cups Gold Medal™ all-purpose flour
-                        1 1/2
-                        teaspoons grated lime peel
-                        1 1/2
-                        teaspoons grated orange peel
-                        1
-                        cup powdered sugar
-                        1
-                        to 2 tablespoons lime juice
-                    </p>
+                    <div id="app">
+                    </div>
+                    <div class="sk-cube-grid">
+                        <div class="sk-cube sk-cube1"></div>
+                        <div class="sk-cube sk-cube2"></div>
+                        <div class="sk-cube sk-cube3"></div>
+                        <div class="sk-cube sk-cube4"></div>
+                        <div class="sk-cube sk-cube5"></div>
+                        <div class="sk-cube sk-cube6"></div>
+                        <div class="sk-cube sk-cube7"></div>
+                        <div class="sk-cube sk-cube8"></div>
+                        <div class="sk-cube sk-cube9"></div>
+                    </div>
                 </div>
                 <div class="block">
                     <h3>Steps</h3>
                     <p>
-                        Heat oven to 350°F. In large bowl, beat butter and granulated sugar with electric mixer on medium speed 2 to 3 minutes or until light and creamy. Add flour, lime peel and orange peel. Beat on low speed until mixture is blended. Gather dough into a ball.
-                        On lightly floured surface, roll dough into 8x6-inch rectangle, about 1/2 inch thick. (If dough cracks around edges, press edges to smooth.) Cut into 12 (2-inch) squares, then cut each square diagonally in half into triangles. On ungreased cookie sheet, place triangles 1/2 inch apart.
-                        Bake 12 to 17 minutes or until edges just begin to brown. Cool 1 minute; remove from cookie sheet to wire rack. Cool completely, about 15 minutes.
-                        In small bowl, mix powdered sugar and lime juice with spoon until smooth and thin enough to drizzle. Drizzle glaze over cookies.
+                        {{ r.step }}
                     </p>
                 </div>
             </div>
             <div class="rate wow fadeInUp" data-wow-delay="200ms" data-wow-duration="200ms" style="float:left; margin-left:0">
                 <h2>Rate For <span>This Recipe</span></h2>
                 <form id="myform" action="#" method="post">
-                <fieldset class="rating">
-                    <input type="radio" id="star5" name="rating" value="5" onclick="vote(5)"/><label class = "full" for="star5" title="Awesome - 5 stars" ></label>
-                    <input type="radio" id="star4" name="rating" value="4" onclick="vote(4)"/><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+                    <fieldset class="rating">
+                        <input type="radio" id="star5" name="rating" value="5" onclick="vote(5)"/><label class = "full" for="star5" title="Awesome - 5 stars" ></label>
+                        <input type="radio" id="star4" name="rating" value="4" onclick="vote(4)"/><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
 
-                    <input type="radio" id="star3" name="rating" value="3" onclick="vote(3)" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
-                    <input type="radio" id="star2" name="rating" value="2" onclick="vote(2)"/><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
-                    <input type="radio" id="star1" name="rating" value="1" onclick="vote(1)"/><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
-                </fieldset>
+                        <input type="radio" id="star3" name="rating" value="3" onclick="vote(3)" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+                        <input type="radio" id="star2" name="rating" value="2" onclick="vote(2)"/><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+                        <input type="radio" id="star1" name="rating" value="1" onclick="vote(1)"/><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+                    </fieldset>
                 </form>
             </div>
             <div class="rate wow fadeInUp" data-wow-delay="200ms" data-wow-duration="200ms" style="float:right; margin-right:0">
-                    <h2>Rated By Users: <span id="rating" style="font-size:48px">{{ number }}</span></h2>
+                <h2>Rated By Users: <span id="rating" style="font-size:48px">{{ number }}</span></h2>
             </div>
 
-            <a class="btn btn-more-info btn-sm wow bounceIn" href="{{ url_for('main.uploadDish',recipe_id="Citrus_Shortbread_Cookies") }}" role="button" style="margin-right:80%">Upload Your Own Work</a>
+            <a class="btn btn-more-info btn-sm wow bounceIn" href="{{ url_for('main.uploadDish',recipe_id=r.rid) }}" role="button" style="margin-right:80%">Upload Your Own Work</a>
 
 
 
@@ -172,7 +171,7 @@ Header start
                 <div class="col-md-12">
                     <div class="block wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">
                         <div class="title">
-                            <h3>See Other People's <span>Work</span></h3>
+                            <h3>See Other <span>Recipes</span></h3>
                         </div>
                         <div class="slick-slider">
                             <div class="imageAndText"><img src="../static/images/slide1.jpg" />
@@ -188,7 +187,7 @@ Header start
                 </div><!-- .col-md-12 close -->
             </div><!-- .row close -->
         </div><!-- .container close -->
-    </section><!-- slider close --> 
+    </section><!-- slider close -->
 <!--
 footer-bottom  start
 ============================= -->
@@ -203,5 +202,35 @@ footer-bottom  start
         </div>
     </div>
 </footer>
+
+<script type="text/babel">
+    class App extends React.Component {
+        state = {
+            loading: true
+        };
+
+        componentDidMount() {
+            setTimeout(() => this.setState({ loading: false }), 2000); // simulates loading of data
+        }
+
+        render() {
+            const { loading } = this.state;
+
+            if(loading) { // if your component doesn't have to wait for async data, remove this block
+                return null; // render null when app is not ready
+            }
+
+            return (
+                <div>
+                    {{ r.ing }}</div>
+        );
+        }
+    }
+
+    ReactDOM.render(
+    <App />,
+        document.getElementById('app')
+    );
+</script>
 </body>
 </html>

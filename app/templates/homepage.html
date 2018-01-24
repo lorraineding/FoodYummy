@@ -6,29 +6,20 @@
 		<title>FoodYummy</title>
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!-- CSS
-        ================================================ -->
         <link rel="stylesheet" type="text/css" href=" ../static/css/slick.css"/>
         <link rel="stylesheet" type="text/css" href=" ../static/css/slick-theme.css"/>
-        <!-- favicon -->
         <link rel="icon" href="favicon.jpg">
-        <!-- Google Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Kalam|Lekton|Lobster+Two|Indie+Flower|Poiret+One" rel="stylesheet">
-        <!-- bootstrap.min css -->
+
 		<link rel="stylesheet" href="../static/css/bootstrap.min.css">
-        <!-- Font-awesome.min css -->
 		<link rel="stylesheet" href="../static/css/font-awesome.min.css">
-        <!-- Main Stylesheet -->
         <link rel="stylesheet" href="../static/css/animate.min.css">
 
 		<link rel="stylesheet" href="../static/css/homepage.css">
-        <!-- Responsive Stylesheet -->
 		<link rel="stylesheet" href="../static/css/responsive.css">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
 
-        <!-- Js -->
         <script src="../static/js/vendor/modernizr-2.6.2.min.js"></script>
-        <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
         <script>window.jQuery || document.write('<script src="../static/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
         <script src="../static/js/jquery.nav.js"></script>
@@ -40,15 +31,9 @@
         <script src=" ../static/js/slick.min.js"></script>
     </head>
 	<body>
-	<!--
-	header-img start 
-	============================== -->
     <section id="hero-area">
       <img class="img-responsive" src="../static/images/spaghetti.jpg" alt="">
     </section>
-	<!--
-    Header start 
-	============================== -->
 	<nav id="navigation">
                
         <div class="container">
@@ -57,7 +42,6 @@
                     <div class="block">
                         <nav class="navbar navbar-default">
                           <div class="container-fluid">
-                            <!-- Brand and toggle get grouped for better mobile display -->
                             <div class="navbar-header">
                               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar">
                                 <span class="sr-only">Toggle navigation</span>
@@ -71,7 +55,6 @@
 
                             </div>
 
-                            <!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse" id="myNavbar">
                               <ul class="nav navbar-nav navbar-right" id="top-nav">
                                 <li><a href="{{url_for('main.dashboard')}}">HOME</a></li>
@@ -85,15 +68,15 @@
 									 <button class="btn btn-default" onclick="window.location.href='{{ url_for('auth.login') }}'">LOG IN</button>
 									{% endif %}
                               </li></ul>
-                            </div><!-- /.navbar-collapse -->
-                          </div><!-- /.container-fluid -->
+                            </div>
+                          </div>
                         </nav>
                     </div>
-                </div><!-- .col-md-12 close -->
-            </div><!-- .row close -->
-        </div><!-- .container close -->
-	</nav><!-- header close -->
-   <!-- Slider -->
+                </div>
+            </div>
+        </div>
+	</nav>
+
  {% block bottom_empty %}
 <section id="slider">
         <div class="container">
@@ -101,7 +84,7 @@
                 <div class="col-md-12">
                     <div class="block wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">
                         <div class="title">
-                            <h3>Popular <span>Recipes</span></h3>
+                            <h3>World-Wide <span>Recipes</span></h3>
                         </div>
                         <div class="slick-slider">
                             <div><img src="../static/images/slide1.jpg" /></div>
@@ -114,16 +97,11 @@
                         </div>
 
                     </div>
-                </div><!-- .col-md-12 close -->
-            </div><!-- .row close -->
-        </div><!-- .container close -->
-    </section><!-- slider close --> 
+                </div>
+            </div>
+        </div>
+    </section>
 
-
-    <!-- #call-to-action close -->
-    <!--
-    blog start
-    ============================ -->
     <section id="blog">
         <div class="container">
 
@@ -133,35 +111,40 @@
                     <div class="block">
 
                         <h1 class="heading">Search <span>for a Recipe</span></h1><br>
+
+                        <form action = "#" method="post">
                         <div class="search">
 
                             <label for="id_label_multiple" style="color: white;">
                                 Select the region
-
-                                <select class="js-example-basic-multiple js-states form-control" id="id_label_multiple">
-                                    <option value="AL">Russia</option>
-                                    <option value="WY">Japan</option>
-                                    <option value="WY">India</option>
-                                    <option value="AL">China</option>
-                                    <option value="AL">France</option>
+                                <select class="js-example-basic-multiple js-states form-control" id="id_label_multiple" name="region">
+                                    <option value="All">All</option>
+                                    <option value="Russia">Russia</option>
+                                    <option value="Japan">Japan</option>
+                                    <option value="China">China</option>
+                                    <option value="Canada">Canada</option>
                                 </select>
                             </label>
 
                             <label for="id_label_multiple2" style="color: white;">
                                 Select the category
-                                <select class="js-example-basic-multiple2 js-states form-control" id="id_label_multiple2" name="category[]">
-                                    <option value="AL">Dessert</option>
-                                    <option value="WY">Meal</option>
+                                <select class="js-example-basic-multiple2 js-states form-control" id="id_label_multiple2" name="kind">
+                                    <option value="meal">meal</option>
+                                    <option value="dessert">dessert</option>
                                 </select>
 
                             </label>
+
                             <label for="id_label_multiple3" style="color: white;">
                                 Select the main ingredient
-                                <select class="js-example-basic-multiple3 js-states form-control" id="id_label_multiple3" name="main-ing[]">
-                                    <option value="AL">pork</option>
-                                    <option value="WY">rice</option>
-                                    <option value="AL">chicken</option>
-                                    <option value="AL">beef</option>
+                                <select class="js-example-basic-multiple3 js-states form-control" id="id_label_multiple3" name="ming">
+                                    <option value="All">All</option>
+                                    <option value="pork">pork</option>
+                                    <option value="rice">rice</option>
+                                    <option value="chicken">chicken</option>
+                                    <option value="beef">beef</option>
+                                    <option value="beef">butter</option>
+                                    <option value="beef">chocolate</option>
                                 </select>
 
                             </label>
@@ -169,93 +152,39 @@
 
                         </div>
 
+                        <!--<div class="search-wrap" style="color:white">-->
+                            <!--<br>-->
+                            <!--Search a recipe:-->
+                            <!--<input type="text" name="recipe">-->
+                            <br><br>
+                            <input style="color:gray" type="submit" value="Search">
 
-
-                        <div class="search-wrap">
-
-
-
-                            <form role="search" method="get" class="search-form" action="#">
-                                <label>
-                                    <br>
-                                    <span class="hide-content" style="color: white;">Search for:</span>
-                                    <input type="search" class="search-field" placeholder="a recipe" value="" name="s" title="Search for:" autocomplete="off">
-                                </label>
-                                <input type="submit" class="search-submit" value="Search">
-                            </form>
-
-
-                        </div> <!-- end search wrap -->
-
-
-
+                        <!--</div>-->
+                        </form>
 
                         <ul>
+                            {% for n in r %}
+
                             <li class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="300ms">
                                 <div class="blog-img">
-                                    <img src="../static/images/search/Russian_Sausages.jpg" alt="blog-img">
+                                    <a href="/recipe/{{n.rid}}"> <img src={{ n.prl }} alt="blog-img"> </a>
                                 </div>
                                 <div class="content-right">
-                                    <h3>Homestyle Chicken Pot Pie</h3>
-                                    <p>Prepared in true New England fash-ion. Tender all-white meat chicken simmered...</p>
+                                    <h3>{{ n.title }}</h3>
+                                    <p>{{ n.desc }}</p>
                                 </div>
                             </li>
-                            <li class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="400ms">
-                                <a href="/recipe/Citrus_Shortbread_Cookies"><div class="blog-img">
-                                    <img src="../static/images/search/Citrus_Shortbread_Cookies.jpg" alt="blog-img">
-                                </div></a>
-                                <div class="content-right">
-                                    <h3>Citrus Shortbread Cookies</h3>
-                                    <p>This recipe was given to me by my mother-in-law, one of the best cooks I know...</p>
-                                </div>
-                            </li>
-                            <li class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="500ms">
-                                <a href="/recipe/Citrus_Shortbread_Cookies"><div class="blog-img">
-                                    <img src="../static/images/search/Chocolate_Caramel_Brownie.jpg" alt="blog-img">
-                                </div></a>
-                                <div class="content-right">
-                                    <h3>Citrus Shortbread Cookies</h3>
-                                    <p>This recipe was given to me by my mother-in-law, one of the best cooks I know...</p>
-                                </div>
-                            </li>
-                            <li class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="600ms">
-                                <a href="/recipe/Citrus_Shortbread_Cookies"><div class="blog-img">
-                                    <img src="../static/images/search/Rice_Roll.jpg" alt="blog-img">
-                                </div></a>
-                                <div class="content-right">
-                                    <h3>Citrus Shortbread Cookies</h3>
-                                    <p>This recipe was given to me by my mother-in-law, one of the best cooks I know...</p>
-                                </div>
-                            </li>
-                            <li class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="700ms">
-                                <div class="blog-img">
-                                    <img src="../static/images/search/Poutine.jpg" alt="blog-img">
-                                </div>
-                                <div class="content-right">
-                                    <h3>Homestyle Chicken Pot Pie</h3>
-                                    <p>Prepared in true New England fash-ion. Tender all-white meat chicken simmered...</p>
-                                </div>
-                            </li>
-                            <li class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="800ms">
-                                <div class="blog-img">
-                                    <img src="../static/images/search/Niku_Udon.jpg" alt="blog-img">
-                                </div>
-                                <div class="content-right">
-                                    <h3>Homestyle Chicken Pot Pie</h3>
-                                    <p>Prepared in true New England fash-ion. Tender all-white meat chicken simmered...</p>
-                                </div>
-                            </li>
+
+                            {% endfor %}
+
                         </ul>
                     </div>
-                </div><!-- .col-md-12 close -->
-            </div><!-- .row close -->
-        </div><!-- .containe close -->
-    </section><!-- #blog close -->
+                </div>
+            </div>
+        </div>
+    </section>
 
 
-    <!--
-    about-us start
-    ============================== -->
     <section id="about-us">
         <div class="container">
             <div class="row">
@@ -265,63 +194,40 @@
                         </h1>
                         <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="600ms"> A website for you to explore world wide recipes.</p>
                     </div>
-                </div><!-- .col-md-12 close -->
-            </div><!-- .row close -->
-        </div><!-- .containe close -->
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="subscribe">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="block">
-                        <h1 class=" heading wow fadeInUp" data-wow-duration="300ms" data-wow-delay="300ms"> SUBSCRIBE <span>to our</span> NEWSLETTER</h1><br>
-                        <form class="form-inline">
-                            <div class="form-group">
-                                <div class="input-group">
-                                    <input type="text" class="form-control" id="exampleInputAmount" placeholder="Enter your email to subscribe...">
-                                    <div class="input-group-addon">
-                                        <button class="btn btn-default" type="submit">subscribe</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div><!-- .col-md-12 close -->
-            </div><!-- .row close -->
-        </div><!-- .containe close -->
-    </section><!-- #subscribe close -->
-    <!--
-    CONTACT US  start
-    ============================= -->
+
     <section id="contact-us">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="block">
                         <h1 class="heading wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms"><span>CONTACT US</span></h1><br>
-                        <form>
+                        <form method="POST" action="/contact">
                             <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay="600ms">
-                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Your Name">
+                                <input name="email" type="email" class="form-control" id="exampleInputEmail1" placeholder="Your Email" required>
                             </div>
                             <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay="800ms">
-                                <input type="text" class="form-control" placeholder="Your Email">
+                                <input name="name" type="text" class="form-control" placeholder="Your Name" required>
                             </div>
                             <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay="1000ms">
-                                <textarea class="form-control" rows="3" placeholder="And your message :)"></textarea>
+                                <textarea name="comment" class="form-control" rows="3" placeholder="And your message :)" required></textarea>
                             </div>
+
+                            <input type="submit" class="btn btn-default wow bounceIn" data-wow-duration="500ms" data-wow-delay="1300ms" role="button" value="send your message">
                         </form>
-                        <a class="btn btn-default wow bounceIn" data-wow-duration="500ms" data-wow-delay="1300ms" href="#" role="button">send your message</a>
                     </div>
                 </div><!-- .col-md-12 close -->
             </div><!-- .row close -->
-           
+
         </div><!-- .container close -->
-    </section><!-- #contact-us close -->
+    </section>
+
     {% endblock %}
-    <!--
-    footer  start
-    ============================= -->
+
     <section id="footer">
         <div class="container">
             <div class="row">
@@ -338,25 +244,22 @@
 
                     </div>
                 </div>
-                <!-- .col-md-4 close -->
 
-                <!-- .col-md-4 close -->
                 <div>
                     <div class="block wow fadeInUp"  data-wow-delay="900ms">
                         <a href="https://twitter.com/_FoodYummy_?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @_FoodYummy_</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                     </div>
                 </div>
-                <!-- .col-md-4 close -->
-            </div><!-- .row close -->
+            </div>
              
-        </div><!-- .containe close -->
-    </section><!-- #footer close -->
-    <!--
-    footer-bottom  start
-    ============================= -->
+        </div>
+
+    </section>
+    <div id="reactClock" style="color:black"></div>
     <footer id="footer-bottom">
         <div class="container">
             <div class="row">
+
                 <div class="col-md-12 col-sm-12">
                     <div class="block">
                         <p>Copyright &copy; 2017 - All Rights Reserved. Design and Developed By <span>FoodYummy</span></p>
@@ -365,6 +268,28 @@
             </div>
         </div>
     </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.1/babel.min.js"></script>
+
+    <script type="text/babel">
+        function tick() {
+            const element = (
+                    <div>
+                        <h3>It is {new Date().toLocaleTimeString()}.</h3>
+                    </div>
+            );
+            ReactDOM.render(
+                element,
+                document.getElementById('reactClock')
+            );
+        }
+
+        setInterval(tick, 1000);
+
+    </script>
 
     </body>
 </html>

@@ -1,15 +1,8 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
+<html class="no-js"> 
+<head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Upload</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
-    <meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
+    <title>{{title}}</title>
     <meta name="author" content="HELEN" />
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -18,23 +11,17 @@
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Kalam|Lekton|Lobster+Two|Indie+Flower|Poiret+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Kalam|Lekton|Lobster+Two|Indie+Flower|Poiret+One" rel="stylesheet">
 
-        <!-- Animate -->
-    <link rel="stylesheet" href="../static/css/animate.css">
+    <!-- Animate -->
+    <link rel="stylesheet" href="{{url_for("static", filename='css/animate.css')}}">
     <!-- Icomoon -->
-    <link rel="stylesheet" href="../static/css/icomoon.css">
+    <link rel="stylesheet" href="{{url_for("static", filename='css/icomoon.css')}}">
     <!-- Bootstrap  -->
-    <link rel="stylesheet" href="../static/css/bootstrap.css">
-
-    <link rel="stylesheet" href="../static/css/style.css">
-
-        <link rel="stylesheet" href="../static/css/homepage.css">
-        <link rel="stylesheet" href="../static/css/responsive.css">
-
-
-    <!-- Modernizr JS -->
-    <script src="../static/js/modernizr-2.6.2.min.js"></script>
+    <link rel="stylesheet" href="{{url_for("static", filename='css/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{url_for("static", filename='css/style2.css')}}">
+    <link rel="stylesheet" href="{{url_for("static", filename='css/homepage.css')}}">
+    <link rel="stylesheet" href="{{url_for("static", filename='css/responsive.css')}}">
     <script type="text/javascript">
     function readURL(input) {
         if (input.files && input.files[0]) {
@@ -52,11 +39,6 @@
           readURL(this);
         });
     </script>
-    <!-- FOR IE9 below -->
-    <!--[if lt IE 9]>
-    <script src="../static/js/respond.min.js"></script>
-    <![endif]-->
-
 </head>
 <body>
 
@@ -115,38 +97,70 @@ Header start
 <div class="container">
     <hr>
      <div class="row"> 
-      <!-- edit form column -->
       <div class="col-md-7 col-md-push-1  probootstrap-animate" id="probootstrap-content">   
-      <h2>Upload Your Recipie!</h2>
-      <br>     
-        <form action="" method="post" class="probootstrap-form" role="form">
+      <h2>Upload Your Recipe!</h2>
+      <br>
+        <form action="" method="post" class="probootstrap-form" runat="server" enctype="multipart/form-data">
              <div class="form-group">
                 <label for="subject">Title</label>
-                <input type="text" class="form-control" id="subject" name="title">
+                <input type="text" class="form-control" id="title" name="title" required>
             </div>
             <div class="form-group">
-            <form id="form1" runat="server">
                 <label for="subject">Image</label>
-                <input type="file" onchange="readURL(this);" id="imgInp" accept=".jpg, .jpeg, .png" />
+                <input type="file" onchange="readURL(this);" id="imgInp" accept=".jpg, .jpeg, .png" name="prl" required>
                 <figure class="upload_img"><img id = "blah" alt="" /></figure>
-            </form>
             </div>
             <div class="form-group">
               <label for="message">Description</label>
-              <textarea cols="30" rows="5" class="form-control" id="message" name="prl"></textarea>
+              <textarea cols="30" rows="5" class="form-control" id="message" name="desc" required></textarea>
             </div>
+            <div class="form-group">
+                <label for="id_label_multiple" style="color: black;">
+                    Origin <br>
+                    <select class="js-example-basic-multiple js-states form-control" name="origin">
 
+                        <option value="Russia">Russia</option>
+                        <option value="Japan">Japan</option>
+                        <option value="India">India</option>
+                        <option value="China">China</option>
+                        <option value="France">France</option>                        
+                        <option value="All">All</option>
+                    </select>
+                </label>
+                <label for="id_label_multiple" style="color: black;">
+                    Category <br>
+                    <select class="js-example-basic-multiple2 js-states form-control" name="category">
+
+                        <option value="dessert">dessert</option>
+                        <option value="meal">meal</option>
+                    </select>
+                </label>
+                <label for="id_label_multiple" style="color: black;">
+                    Main Ingredient <br>
+                    <select class="js-example-basic-multiple3 js-states form-control" name="main-ing">
+                        <option value="pork">Pork</option>
+                        <option value="seafood">Seafood</option>
+                        <option value="chicken">Chicken</option>
+                        <option value="beef">Beef</option>
+                        <option value="chocolate">Chocolate</option>
+                        <option value="egg">Egg</option>
+                        <option value="butter">Butter</option>
+                        <option value="flour">Flour</option>
+                        <option value="All">All</option>
+                    </select>
+                </label>
+            </div>         
             <div class="form-group">
               <label for="message">Ingredients</label>
-              <textarea cols="30" rows="4" class="form-control" id="message" name="message"></textarea>
+              <textarea cols="30" rows="4" class="form-control" id="message" name="ingre" required></textarea>
             </div>
             <div class="form-group">
               <label for="message">Steps</label>
-              <textarea cols="30" rows="10" class="form-control" id="message" name="message"></textarea>
+              <textarea cols="30" rows="10" class="form-control" id="message" name="steps" required></textarea>
             </div>
             <br>
             <div class="form-group">
-              <input type="submit" class="btn btn-primary btn-lg" id="submit" name="submit" value="Upload Your recipe!" onclick="location.href='myspace.html'">
+              <input type="submit" class="btn btn-primary btn-lg" id="submit" name="submit" value="Upload Your recipe!">
             </div>
         </form>
       </div>

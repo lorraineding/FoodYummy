@@ -1,15 +1,11 @@
 
 <!DOCTYPE html>
-<head>
+<html class="no-js">
+    <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>My Recipe</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
-    <meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
+    <title>{{title}}</title>
     <meta name="author" content="HELEN" />
 
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <link rel="shortcut icon" href="favicon.ico">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
@@ -21,23 +17,13 @@
     <link rel="stylesheet" href="../static/css/icomoon.css">
     <!-- Bootstrap  -->
     <link rel="stylesheet" href="../static/css/bootstrap.css">
-
-    <link rel="stylesheet" href="../static/css/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    <link rel="stylesheet" href="../static/css/style2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <!-- Modernizr JS -->
     <script src="js/modernizr-2.6.2.min.js"></script>
-    <!-- FOR IE9 below -->
-    <!--[if lt IE 9]>
-    <script src="js/respond.min.js"></script>
-    <![endif]-->
-    <style>
-        .active a{background:none !important; color:#333 !important;}
-    </style>
-
 </head>
 <body>
-    <!-- PAGE -->
 <div id="page" class="single_page">
     <div id="fh5co-offcanvas">
         <a href="#" class="fh5co-close-offcanvas js-fh5co-close-offcanvas">
@@ -47,11 +33,11 @@
             </span>
         </a>
         <div class="fh5co-bio">
-            <h1 id="title"><a href = "myspace.html">My Space</h1>
+            <h1 id="title"><a href="{{url_for('main.dashboard')}}">My Space</h1>
             <figure>
-                <img src="../static/images/profile.jpg" alt="" class="img-responsive">
+                <img src=" {{ current_user.avatar }}" alt="" class="img-responsive"><a href="{{url_for('main.dashboard')}}"></a>
             </figure>
-            <h2>Ratatoulie</h2>
+            <h2>{{ current_user.username}}</h2>
         </div>
         <div class="fh5co-menu">
             <div class="fh5co-box">
@@ -73,120 +59,69 @@
         });
     </script>
     <!-- END #fh5co-offcanvas -->
-    <header id="fh5co-header">
-        
+    <header id="fh5co-header">       
         <div class="container-fluid">
-            <!-- LOGO -->
-            <div class="logo pull-right">
-                <a href="homepage.html" ><img src="favicon.jpg"></a>
-            </div><!-- //LOGO -->
-
             <div class="row">
                 <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
-                <div class="col-lg-12 col-md-12 text-center">
-                    <h1 id="fh5co-logo">My Recipe</a></h1>
-                </div>
-
             </div>
         
         </div>
 
-    </header>
-{% block abc %}
+    </header> 
+    <section class="probootstrap-section probootstrap-section-colored probootstrap-bg probootstrap-custom-heading probootstrap-tab-section" style="background-image: url(../static/images/slider_2.jpg)"">
+        <div class="container">
+      <div class="container-fluid">
+
+        </div>
+          <div class="row">
+            <div class="col-md-12 text-center section-heading probootstrap-animate">
+              <h1>{{title}}</h1>
+            </div>
+          </div>
+        </div>
+        {% block abc %}
+
+      </section>
     <div id="recipe">
-        <!-- BLOG -->
-        <section id="blog">
-            
+        <!-- RECIPE -->
+        <section id="blog">     
             <!-- CONTAINER -->
             <div class="container">
-                
                 <!-- ROW -->
                 <div class="row">
-                    <!-- BLOG BLOCK -->
+                    <!-- RECIPE BLOCK -->
                     <div class="blog_block col-lg-10 col-md-9 padbot50">
-                        
-                        <!-- BLOG POST -->
-                        <div class="blog_post margbot50 clearfix animate-box">
-                            <div class="blog_post_img">
-                                <img src="../static/images/pic_1.jpg" alt="" />
-                                <a class="zoom" href="blog-post.html" ></a>
-                            </div>
-                            <div class="blog_post_descr">
-                                <div class="blog_post_date">JANUARY 30 | 21:30</div>
-                                <a class="blog_post_title" href="blog-post.html" >Juicy Roast Chicken</a>
-                                <ul class="blog_post_info">
-                                    <li><a href="javascript:void(0);" >Meal</a></li>
-                                    <li><a href="javascript:void(0);" >German</a></li>
-                                    <li><a href="javascript:void(0);" >3 Comments</a></li>
-                                </ul>
-                                <hr>
-                                <div class="blog_post_content">My grandmother's recipe for roasted chicken. We are German and she used to do it this way all the time. I never have had a chicken this juicy before; this little trick works and makes the people eating it go silent. It's funny. We nibble on the celery after.</div>
-                                <a class="read_more_btn" href="blog-post.html" >Read More</a>
-                            </div>
-                        </div><!-- //BLOG POST -->
-                        
-
-                        <!-- BLOG POST -->
-                        <div class="blog_post margbot50 clearfix animate-box">
-                            <div class="blog_post_img">
-                                <img src="../static/images/pic_3.jpg" alt="" />
-                                <a class="zoom" href="blog-post.html" ></a>
-                            </div>
-                            <div class="blog_post_descr">
-                                <div class="blog_post_date">JANUARY 30 | 21:30</div>
-                                <a class="blog_post_title" href="blog-post.html" >Restaurant Style Beef and Broccoli</a>
-                                <ul class="blog_post_info">
-                                    <li><a href="javascript:void(0);" >Meal</a></li>
-                                    <li><a href="javascript:void(0);" >Chinese</a></li>
-                                    <li><a href="javascript:void(0);" >3 Comments</a></li>
-                                </ul>
-                                <hr>
-                                <div class="blog_post_content">This is my go-to recipe when I want Chinese food without having to go out. Very easy and delicious. Substituting chicken for the beef works great too. Serve over rice.</div>
-                                <a class="read_more_btn" href="blog-post.html" >Read More</a>
-                            </div>
-                        </div><!-- //BLOG POST -->
-                        
-                        
-                        <!-- BLOG POST -->
-                        <div class="blog_post margbot50 clearfix animate-box">
-                            <div class="blog_post_img">
-                                <img src="../static/images/pic_6.jpg" alt="" />
-                                <a class="zoom" href="blog-post.html" ></a>
-                            </div>
-                            <div class="blog_post_descr">
-                                <div class="blog_post_date">JANUARY 30 | 21:30</div>
-                                <a class="blog_post_title" href="blog-post.html" >Baked Apple Cups</a>
-                                <ul class="blog_post_info">
-                                    <li><a href="javascript:void(0);" >Dessert</a></li>
-                                    <li><a href="javascript:void(0);" >American</a></li>
-                                    <li><a href="javascript:void(0);" >3 Comments</a></li>
-                                </ul>
-                                <hr>
-                                <div class="blog_post_content">These apple crunch pie apple cups are the perfect example of that. They taste exactly like apple pie with a crunchy crumb topping, but have half the calories, less fat, and more healthy nutrients than a single slice of pie. And, despite being low-cal and healthy, they don’t feel or taste at all like diet food.</div>
-                                <a class="read_more_btn" href="blog-post.html" >Read More</a>
-                            </div>
-                        </div><!-- //BLOG POST -->
-                        
-                        
-                       
-                    </div><!-- //BLOG BLOCK -->
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                      <a href="{{url_for('main.uploadRecipe')}}" class="btn btn-primary">Upload New Recipe</a>
+                        {% for n in r %}
+                            <!-- RECIPE POST -->
+                            <div class="blog_post margbot50 clearfix animate-box">
+                                <div class="blog_post_img">
+                                    <img src="{{ n.prl }}" alt="" />
+                                    <a class="zoom" href="../recipe/{{ n.rid }}" ></a>
+                                </div>
+                                <div class="blog_post_descr">
+                                    <div class="blog_post_date">{{ n.ts.strftime('%B %d %Y - %H:%M:%S') }}</div>
+                                    <a class="blog_post_title" href="blog-post.html" >{{ n.title }}</a>
+                                    <ul class="blog_post_info">
+                                        <li>{{ n.kind }}</li>
+                                        <li>{{ n.region }}</li>
+                                        <li>{{ n.ming }}</li>
+                                    </ul>
+                                    <hr>
+                                    <div class="blog_post_content">{{ n.desc }}</div>
+                                    <a class="read_more_btn" href="blog-post.html" >Read More</a>
+                                </div>
+                            </div><!-- //RECIPE POST -->
+                        {% endfor %}
+                    </div><!-- //RECIPE BLOCK -->
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <a href="{{url_for('main.uploadRecipe')}}" class="btn btn-primary">Upload New Recipe</a>
+                        </div>
                     </div>
-                </div>
                 </div><!-- //ROW -->
             </div><!-- //CONTAINER -->
-        </section><!-- //BLOG -->
-       
+        </section><!-- //RECIPE -->
     </div>
-    </div>
-
- 
-
-<!-- 
-end here
- -->
     <div class="page-turn">
         <div class="row">
             <div class="col-md-6 col-md-offset-3 text-center">
@@ -203,15 +138,13 @@ end here
                         <li><a href="page4.html">4</a></li>
                         <li><a href="page5.html">5</a></li>
                         <li><a href="page6.html" aria-label="Next">
-                                <span aria-hidden="true">Next</span>
-                            </a>
-                        </li>
+                            <span aria-hidden="true">Next</span>
+                        </a></li>
                     </ul> <!-- /.pagination -->
                 </nav>
             </div>
         </div>
     </div> <!-- /.page-turn -->
-</div>
 
 {% endblock %}
     <footer>
@@ -221,7 +154,7 @@ end here
                 <div class="col-md-4 col-sm-4">
                     Copyright &copy; 2017
                     <br>
-                    All rights reserved by <a href="foodyummy.html" style="margin-left: 4px;">Food Yummy</a>
+                    All rights reserved by <a href="{{url_for('main.index')}}" style="margin-left: 4px;">Food Yummy</a>
                 </div>
                 <!-- footer-nav -->
                     <ul class="footer-nav">
@@ -232,17 +165,7 @@ end here
                     </ul> <!-- /.footer-nav -->
             </div>
         </div>
-    </footer>
-    <script src="../static/js/jquery.min.js" type="text/javascript"></script>
-    <script src="../static/js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="../static/js/jquery.nicescroll.min.js" type="text/javascript"></script>
-    <script src="../static/js/superfish.min.js" type="text/javascript"></script>
-    <script src="../static/js/jquery.flexslider-min.js" type="text/javascript"></script>
-    <script src="../static/js/owl.carousel.js"></script>
-    <script src="../static/js/animate.js" type="text/javascript"></script>
-    <script src="../static/js/myscript.js" type="text/javascript"></script>
-
-    
+    </footer>    
     <!-- jQuery -->
     <script src="../static/js/jquery.min.js"></script>
     <!-- jQuery Easing -->
@@ -253,6 +176,8 @@ end here
     <script src="../static/js/jquery.waypoints.min.js"></script>
     <!-- Main JS -->
     <script src="../static/js/main.js"></script>
+    <script src="../static/js/animate.js" type="text/javascript"></script>
+    <script src="../static/js/myscript.js" type="text/javascript"></script>
 </body>
 </html>
 

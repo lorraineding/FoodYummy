@@ -1,3 +1,5 @@
+
+
 $(document).ready(function(){
 
 	$("#navigation").sticky({
@@ -45,6 +47,7 @@ $(document).ready(function(){
     $('.js-example-basic-multiple2').select2();
     $('.js-example-basic-multiple3').select2();
 
+
 });
 
 function vote(value) {
@@ -56,6 +59,9 @@ function vote(value) {
  //    $(this).closest("form").submit();
  //    document.getElementById("rating").innerHTML = me.attr('value');
  //  });
+
+
+
 
 
 

@@ -1,34 +1,39 @@
 import os
 basedir = os.path.abspath(os.path.dirname(__file__))
 class Config:
+    
+    WTF_CSRF_ENABLED = True
+    SECRET_KEY = os.urandom(24)
+    
+    FY_MAIL_SUBJECT_PREFIX = 'Dear User: '
+    FY_MAIL_SENDER = '[FoodYummy] <duoduo.liu@mail.mcgill.com>'
+    FY_ADMIN = os.environ.get('FY_ADMIN')
+    UPLOAD_FOLDER = './user'
+    MAX_CONTENT_LENGTH = 5 * 1024 * 1024
 
-	WTF_CSRF_ENABLED = True
-	SECRET_KEY = os.urandom(24)
+    UPLOAD_FOLDER_DISH= os.path.join(basedir,"app/static/images/dish")
+    UPLOAD_FOLDER_RECIPE =  os.path.join(basedir,"app/static/images/recipe")
+    UPLOAD_FOLDER_USER = os.path.join(basedir,"app/static/user")
+    ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg', 'gif'])
 
-	FY_MAIL_SUBJECT_PREFIX = 'Dear User: '
-	FY_MAIL_SENDER = '[FoodYummy] <duoduo.liu@mail.mcgill.com>'
-	FY_ADMIN = os.environ.get('FY_ADMIN')
+    @staticmethod
+    def init_app(app):
+        pass
 
-	@staticmethod
-	def init_app(app):
-		pass
-		
 class DevelopmentConfig(Config):
-	DEBUG = True
-	MAIL_SERVER ='smtp.gmail.com'
-	MAIL_PORT = 465
-	MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
-	MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
-	MAIL_USE_TLS = False
-	MAIL_USE_SSL = True
-	# Config MongoDB
-	MONGO_URI = 'mongodb://localhost:27017/FoodYummy'
-	MONGODB_DB = 'FoodYummy'
+    DEBUG = True
+    MAIL_SERVER ='smtp.gmail.com'
+    MAIL_PORT = 465
+    MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
+    MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
+    MAIL_USE_TLS = False
+    MAIL_USE_SSL = True
+    MONGO_URI = 'mongodb://localhost:27017/FoodYummy'
+    MONGODB_DB = 'FoodYummy'
 
 class TestingConfig(Config):
-	TESTING = True
-	# PRESERVE_CONTEXT_ON_EXCEPTION = False
-	MONGO_URI = 'mongomock://localhost:27017/testdb'
+    TESTING = True
+    MONGO_URI = 'mongomock://localhost:27017/testdb'
 
 config = {
 'development': DevelopmentConfig,

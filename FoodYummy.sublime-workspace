@@ -4,6 +4,62 @@
 		"selected_items":
 		[
 			[
+				"fol",
+				"following"
+			],
+			[
+				"R",
+				"ReferenceField"
+			],
+			[
+				"E",
+				"EditProfileAdminForm"
+			],
+			[
+				"lo",
+				"logger"
+			],
+			[
+				"cu",
+				"current_app"
+			],
+			[
+				"path",
+				"path_to_fakes"
+			],
+			[
+				"pa",
+				"path_to_fakes"
+			],
+			[
+				"for",
+				"forgery_py"
+			],
+			[
+				"user",
+				"username"
+			],
+			[
+				"sta",
+				"staticmethod"
+			],
+			[
+				"ed",
+				"editprofile-admin"
+			],
+			[
+				"res",
+				"request_id"
+			],
+			[
+				"re",
+				"request"
+			],
+			[
+				"ero",
+				"error"
+			],
+			[
 				"mogo",
 				"mongoengine"
 			],
@@ -26,10 +82,6 @@
 			[
 				"int",
 				"IntField"
-			],
-			[
-				"re",
-				"redirect"
 			],
 			[
 				"mail",
@@ -85,10 +137,6 @@
 			],
 			[
 				"f",
-				"for	for (…) {…}"
-			],
-			[
-				"for",
 				"for	for (…) {…}"
 			],
 			[
@@ -372,10 +420,6 @@
 				"outer"
 			],
 			[
-				"pa",
-				"pair2"
-			],
-			[
 				"fri",
 				"friends"
 			],
@@ -468,31 +512,7 @@
 				"copyOf"
 			],
 			[
-				"res",
-				"result_tmp"
-			],
-			[
 				"DI",
-				"dividand"
-			],
-			[
-				"TE",
-				"temp"
-			],
-			[
-				"TO",
-				"toString"
-			],
-			[
-				"sY",
-				"System"
-			],
-			[
-				"print",
-				"println"
-			],
-			[
-				"divi",
 				"dividand"
 			]
 		]
@@ -503,31 +523,7 @@
 			"file": "app/main/views.py",
 			"settings":
 			{
-				"buffer_size": 2139,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/auth/views.py",
-			"settings":
-			{
-				"buffer_size": 2949,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/templates/auth/unconfirmed.html",
-			"settings":
-			{
-				"buffer_size": 172,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/templates/auth/email/confirmation.txt",
-			"settings":
-			{
-				"buffer_size": 315,
+				"buffer_size": 7418,
 				"line_ending": "Unix"
 			}
 		},
@@ -535,32 +531,40 @@
 			"file": "app/models.py",
 			"settings":
 			{
-				"buffer_size": 4205,
+				"buffer_size": 6064,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/decorators.py",
+			"file": "app/templates/editprofile-admin.html",
 			"settings":
 			{
-				"buffer_size": 643,
+				"buffer_size": 434,
 				"line_ending": "Windows",
-				"name": "from functools import wraps"
+				"name": "{% extends homepage.html %}"
 			}
 		},
 		{
-			"file": "tests/test_user_model.py",
+			"file": "app/templates/editprofile-admin-form.html",
 			"settings":
 			{
-				"buffer_size": 1426,
+				"buffer_size": 815,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "tests/test_basics.py",
+			"file": "app/static/js/editprofile.js",
 			"settings":
 			{
-				"buffer_size": 584,
+				"buffer_size": 2213,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/main/forms.py",
+			"settings":
+			{
+				"buffer_size": 1532,
 				"line_ending": "Unix"
 			}
 		}
@@ -596,7 +600,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 400.0
+		"width": 456.0
 	},
 	"console":
 	{
@@ -613,45 +617,54 @@
 	},
 	"file_history":
 	[
-		"/Q/Documents/OneDrive/OneDrive - McGill University/FoodYummy/app/main/__init__.py",
+		"/Q/Documents/OneDrive/OneDrive - McGill University/Apache24/conf/httpd.conf",
+		"/Q/Documents/OneDrive/OneDrive - McGill University/FoodYummy/app/main/forms.py",
 		"/Q/Documents/OneDrive/OneDrive - McGill University/FoodYummy/config.py",
+		"/Q/Documents/OneDrive/OneDrive - McGill University/FoodYummy/app/templates/homepage.html",
+		"/Q/Documents/OneDrive/OneDrive - McGill University/FoodYummy/app/templates/includes/messages.html",
+		"/Q/Documents/OneDrive/OneDrive - McGill University/FoodYummy/app/auth/views.py",
+		"/Q/Documents/OneDrive/OneDrive - McGill University/FoodYummy/app/decorators.py",
+		"/Q/Documents/OneDrive/OneDrive - McGill University/FoodYummy/app/static/fakes/recipes/recipes.json",
+		"/Q/Documents/OneDrive/OneDrive - McGill University/FoodYummy/app/static/js/editprofile.js",
+		"/Q/Documents/OneDrive/OneDrive - McGill University/FoodYummy/app/templates/editprofile-admin-form.html",
+		"/Q/Documents/OneDrive/OneDrive - McGill University/FoodYummy/app/templates/editprofile.html",
+		"/Q/Documents/OneDrive/OneDrive - McGill University/FoodYummy/app/auth/forms.py",
+		"/C/Users/HiroAAA/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Q/Documents/OneDrive/OneDrive - McGill University/FoodYummy/app/templates/uploaddish.html",
+		"/Q/Documents/OneDrive/OneDrive - McGill University/FoodYummy/tests/test_basics.py",
+		"/Q/Documents/OneDrive/OneDrive - McGill University/FoodYummy/tests/test_user_model.py",
+		"/Q/Documents/OneDrive/OneDrive - McGill University/FoodYummy/app/templates/auth/email/confirmation.txt",
+		"/Q/Documents/OneDrive/OneDrive - McGill University/FoodYummy/app/templates/auth/unconfirmed.html",
+		"/Q/Documents/OneDrive/OneDrive - McGill University/417 Robotics/RRT_Assignment/rrt_planner.py",
+		"/Q/Documents/OneDrive/OneDrive - McGill University/FoodYummy/app/main/__init__.py",
 		"/Q/Documents/OneDrive/OneDrive - McGill University/FoodYummy/app/main/errors.py",
 		"/Q/Documents/OneDrive/OneDrive - McGill University/FoodYummy/app/templates/403.html",
-		"/Q/Documents/OneDrive/OneDrive - McGill University/FoodYummy/tests/test_basics.py",
 		"/Q/Documents/OneDrive/OneDrive - McGill University/FoodYummy/manage.py",
-		"/Q/Documents/OneDrive/OneDrive - McGill University/FoodYummy/tests/test_user_model.py",
 		"/Q/Documents/OneDrive/OneDrive - McGill University/FoodYummy/app/email.py",
 		"/Q/Documents/OneDrive/OneDrive - McGill University/FoodYummy/app/__init__.py",
 		"/Q/Google Drive/LTI4RE.txt",
 		"/Q/Documents/OneDrive/OneDrive - McGill University/FoodYummy/app/templates/auth/login.html",
-		"/Q/Documents/OneDrive/OneDrive - McGill University/FoodYummy/app/main/forms.py",
 		"/Q/Documents/OneDrive/OneDrive - McGill University/FoodYummy/app/models.py",
 		"/Q/Documents/OneDrive/OneDrive - McGill University/FoodYummy/run.py",
-		"/Q/Documents/OneDrive/OneDrive - McGill University/FoodYummy/app/templates/auth/email/confirmation.txt",
 		"/Q/Documents/OneDrive/OneDrive - McGill University/FoodYummy/app/templates/404.html",
 		"/Q/Documents/OneDrive/OneDrive - McGill University/FoodYummy/app/templates/500.html",
 		"/Q/Documents/OneDrive/OneDrive - McGill University/FoodYummy/FoodYummy.wsgi",
 		"/Q/Documents/OneDrive/OneDrive - McGill University/Apache24/logs/access.log",
-		"/Q/Documents/OneDrive/OneDrive - McGill University/Apache24/conf/httpd.conf",
 		"/Q/Documents/OneDrive/OneDrive - McGill University/Apache24/logs/error.log",
 		"/Q/Documents/OneDrive/OneDrive - McGill University/Apache24/conf/extra/httpd-mpm.conf",
 		"/Q/Documents/OneDrive/OneDrive - McGill University/Apache24/logs/install.log",
 		"/Q/Documents/OneDrive/OneDrive - McGill University/Apache24/logs/httpd.pid",
 		"/Q/Documents/OneDrive/OneDrive - McGill University/FoodYummy/app/templates/mydish.html",
 		"/Q/Documents/OneDrive/OneDrive - McGill University/FoodYummy/app/templates/myfollowing.html",
-		"/Q/Documents/OneDrive/OneDrive - McGill University/FoodYummy/app/templates/uploaddish.html",
 		"/Q/Documents/OneDrive/OneDrive - McGill University/FoodYummy/app/main/views.py",
 		"/Q/Documents/OneDrive/OneDrive - McGill University/FoodYummy/app/templates/recipe.html",
 		"/Q/Documents/OneDrive/OneDrive - McGill University/FoodYummy/app/static/config.rb",
-		"/Q/Documents/OneDrive/OneDrive - McGill University/FoodYummy/app/templates/homepage.html",
-		"/Q/Documents/OneDrive/OneDrive - McGill University/FoodYummy/app/auth/views.py",
 		"/Q/Documents/OneDrive/OneDrive - McGill University/FoodYummy/app/templates/myrecipe.html",
 		"/Q/Documents/OneDrive/OneDrive - McGill University/FoodYummy/app/templates/myspace.html",
 		"/Q/Documents/OneDrive/OneDrive - McGill University/FoodYummy/app/static/js/homepage.js",
 		"/Q/Documents/OneDrive/OneDrive - McGill University/FoodYummy/app/templates/uploadrecipie.html",
 		"/Q/Documents/OneDrive/OneDrive - McGill University/FoodYummy/app/static/css/homepage.css",
 		"/Q/Documents/OneDrive/OneDrive - McGill University/FoodYummy/app/static/js/jquery.min.js",
-		"/Q/Documents/OneDrive/OneDrive - McGill University/FoodYummy/app/auth/forms.py",
 		"/Q/Documents/OneDrive/OneDrive - McGill University/FoodYummy/app/templates/auth/register.html",
 		"/Q/Documents/OneDrive/OneDrive - McGill University/FoodYummy/app/templates/register.html",
 		"/Q/Documents/OneDrive/OneDrive - McGill University/FoodYummy/app/main/loginviews.py",
@@ -695,8 +708,6 @@
 		"/Q/Documents/OneDrive/OneDrive - McGill University/Comp307/WelcomePage.html",
 		"/Q/Documents/OneDrive/OneDrive - McGill University/Comp307/307 mini HW1/WelcomePage.html",
 		"/C/Users/HiroAAA/Documents/Python Scripts/drawSample.py",
-		"/C/Users/HiroAAA/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
-		"/Q/Documents/OneDrive/OneDrive - McGill University/417 Robotics/RRT_Assignment/rrt_planner.py",
 		"/C/Users/HiroAAA/AppData/Roaming/Sublime Text 2/Packages/User/Default (Windows).sublime-keymap",
 		"/Q/Books/Skill Walkthru/Languages/法语/flac/package.xml.dump",
 		"/C/Users/HiroAAA/Documents/Python Scripts/hillclimbing.py",
@@ -733,18 +744,11 @@
 		"/Q/Video House/TV/Buffy The Vampire Slayer Complete Series Season 1,2,3,4,5,6,7 + Extras/Buffy The Vampire Slayer (TV-Series, 1997-2003)/Season 5/Buffy.S05E21.The.Weight.Of.The.World.srt",
 		"/Q/Video House/TV/Buffy The Vampire Slayer Complete Series Season 1,2,3,4,5,6,7 + Extras/Buffy The Vampire Slayer (TV-Series, 1997-2003)/Season 5/Buffy.S05E02.Real.Me + C.ass",
 		"/Q/Google Drive/All About Buffy/Buffy.the.Vampire.Slayer netflix_in_use/Buffy.the.Vampire.Slayer.S05E04.WEBRip.Netflix.en.srt",
-		"/X/BufferZone/连载中的电视/Preacher/S2/Preacher.S02E12.1080p.HDTV.x264-BRISK[rarbg]/Preacher.S02E12.720p.HDTV.x264-AVS.大家字幕组.简体&英文.ass",
-		"/Q/Documents/OneDrive/OneDrive - McGill University/test307.html",
-		"/Q/Documents/OneDrive/OneDrive - McGill University/packet info 307.txt",
-		"/Q/Video House/TV/Buffy The Vampire Slayer Complete Series Season 1,2,3,4,5,6,7 + Extras/French Dub/Buffy.S01.FRENCH.REMASTERED.HDTV.XViD.MP3-JIMIJIMS/Buffy S1E01.FR.srt",
-		"/Q/Video House/TV/Buffy The Vampire Slayer Complete Series Season 1,2,3,4,5,6,7 + Extras/French Dub/Buffy.S01.FRENCH.REMASTERED.HDTV.XViD.MP3-JIMIJIMS/episode 1/Buffy S1E01.FR.srt",
-		"/Q/Video House/TV/Veronica Mars/Veronica Mars säsong 1/Veronica Mars 1.01 - Pilot.Eng.srt",
-		"/Q/Video House/TV/Buffy The Vampire Slayer Complete Series Season 1,2,3,4,5,6,7 + Extras/French Dub/Buffy.S01.FRENCH.REMASTERED.HDTV.XViD.MP3-JIMIJIMS/episode 1/s101 transcript.txt",
-		"/C/ProgramData/Microsoft/ClickToRun/{9AC08E99-230B-47e8-9721-4577B7F124EA}/C2RManifest.PowerPivot.PowerPivot.x-none.msi.16.x-none.xml"
+		"/X/BufferZone/连载中的电视/Preacher/S2/Preacher.S02E12.1080p.HDTV.x264-BRISK[rarbg]/Preacher.S02E12.720p.HDTV.x264-AVS.大家字幕组.简体&英文.ass"
 	],
 	"find":
 	{
-		"height": 36.0
+		"height": 38.0
 	},
 	"find_in_files":
 	{
@@ -758,6 +762,17 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"can",
+			"UPLOAD_FO",
+			"\")}}\"",
+			"\"{{url_for(\"static\",filename=\"",
+			"img",
+			"..",
+			"../static/",
+			"../static",
+			"prl",
+			"os",
+			"prl",
 			"obje",
 			"（[^（]+[）$]",
 			"\\([^\\(]+[\\)$]",
@@ -874,25 +889,17 @@
 			"knock",
 			"爬",
 			"站",
-			"knock",
-			"站",
-			"爬",
-			"knock",
-			"hole",
-			"%",
-			"console",
-			"con",
-			"closure",
-			"trim",
-			"unde",
-			"console"
+			"knock"
 		],
 		"highlight": true,
 		"in_selection": false,
 		"preserve_case": false,
-		"regex": true,
+		"regex": false,
 		"replace_history":
 		[
+			"')}}\"",
+			"\"{{url_for('static',filename='",
+			"{{url_for(\"static\",filename=\"",
 			"",
 			"filename='",
 			"{{url_for(\"static\")}}",
@@ -933,7 +940,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -941,44 +948,48 @@
 					"file": "app/main/views.py",
 					"settings":
 					{
-						"buffer_size": 2139,
+						"buffer_size": 7418,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								185,
-								185
+								598,
+								598
 							]
 						],
 						"settings":
 						{
 							"is_init_dirty_state": false,
 							"origin_encoding": "ASCII",
+							"rulers":
+							[
+							],
 							"syntax": "Packages/Python/Python.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 720.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "app/auth/views.py",
+					"file": "app/models.py",
 					"settings":
 					{
-						"buffer_size": 2949,
+						"buffer_size": 6064,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1220,
-								1220
+								2930,
+								2930
 							]
 						],
 						"settings":
@@ -986,38 +997,38 @@
 							"is_init_dirty_state": false,
 							"origin_encoding": "ASCII",
 							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 660.0,
+						"translation.y": 2046.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "app/templates/auth/unconfirmed.html",
+					"file": "app/templates/editprofile-admin.html",
 					"settings":
 					{
-						"buffer_size": 172,
+						"buffer_size": 434,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								172,
-								172
+								26,
+								26
 							]
 						],
 						"settings":
 						{
-							"auto_name": "",
+							"auto_name": "{% extends homepage.html %}",
 							"is_init_dirty_state": false,
+							"is_preview": true,
 							"origin_encoding": "ASCII",
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1027,109 +1038,55 @@
 				},
 				{
 					"buffer": 3,
-					"file": "app/templates/auth/email/confirmation.txt",
+					"file": "app/templates/editprofile-admin-form.html",
 					"settings":
 					{
-						"buffer_size": 315,
+						"buffer_size": 815,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								315,
-								315
+								475,
+								475
 							]
 						],
 						"settings":
 						{
 							"is_init_dirty_state": false,
+							"is_preview": true,
 							"origin_encoding": "ASCII",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 198.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 4,
-					"file": "app/models.py",
+					"file": "app/static/js/editprofile.js",
 					"settings":
 					{
-						"buffer_size": 4205,
+						"buffer_size": 2213,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2739,
-								2739
+								733,
+								733
 							]
 						],
 						"settings":
 						{
 							"is_init_dirty_state": false,
 							"origin_encoding": "ASCII",
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 420.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "app/decorators.py",
-					"settings":
-					{
-						"buffer_size": 643,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								280,
-								280
-							]
-						],
-						"settings":
-						{
-							"auto_name": "from functools import wraps",
-							"syntax": "Packages/Python/Python.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "tests/test_user_model.py",
-					"settings":
-					{
-						"buffer_size": 1426,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								62,
-								62
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/Python/Python.tmLanguage",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
@@ -1139,23 +1096,25 @@
 					"type": "text"
 				},
 				{
-					"buffer": 7,
-					"file": "tests/test_basics.py",
+					"buffer": 5,
+					"file": "app/main/forms.py",
 					"settings":
 					{
-						"buffer_size": 584,
+						"buffer_size": 1532,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								97,
-								97
+								1019,
+								1019
 							]
 						],
 						"settings":
 						{
+							"is_init_dirty_state": false,
+							"is_preview": true,
 							"origin_encoding": "ASCII",
 							"syntax": "Packages/Python/Python.tmLanguage",
 							"translate_tabs_to_spaces": false
@@ -1214,6 +1173,26 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"edi",
+				"app/templates/editprofile-admin.html"
+			],
+			[
+				"confi",
+				"config.py"
+			],
+			[
+				"home",
+				"app/templates/homepage.html"
+			],
+			[
+				"edit",
+				"app/templates/editprofile.html"
+			],
+			[
+				"upl",
+				"app/templates/uploaddish.html"
+			]
 		],
 		"width": 0.0
 	},

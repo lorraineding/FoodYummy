@@ -1,20 +1,9 @@
-/*		Tablet Layout: 768px.
-		Gutters: 24px.
-		Outer margins: 28px.
-		Inherits styles from: Default Layout.
------------------------------------------------------------------
-cols    1     2      3      4      5      6      7      8
-px      68    160    252    344    436    528    620    712    */
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  /*--
-    custom heading Start
---*/
+
   .title {
     text-align: left;
   }
-  /*--
-    nav Start
---*/
   nav .block {
     padding-left: 0px;
     padding-right: 0px;
@@ -25,18 +14,10 @@ px      68    160    252    344    436    528    620    712    */
     padding: 20px 15px 15px 50px;
   }
 
-
-
-  /*--
-    slider Start
---*/
   #slider .block h3 {
     text-align: left;
   }
 
-  /*--
-    blog Start
---*/
   #blog .block {
     text-align: center;
   }
@@ -61,23 +42,19 @@ px      68    160    252    344    436    528    620    712    */
   #blog .block ul li .blog-img-2 img {
     width: 100%;
   }
-  #blog .block ul li .content-left {
-    padding: 40px 20px 0;
-  }
   #blog .block ul li .content-right {
     padding: 40px 20px 0;
   }
+
   #blog .block .btn-more-info,.page-body .btn-more-info {
     float: none;
     margin-top: 30px;
   }
+
   #blog .block .btn-more-info:hover, .page-body .btn-more-info:hover {
     border-radius: 10px;
   }
 
-  /*--
-    contact-us Start
---*/
   #contact-us {
     padding: 60px 0 0;
   }
@@ -91,9 +68,7 @@ px      68    160    252    344    436    528    620    712    */
     padding: 15px 80px;
     float: inherit;
   }
-  /*--
-    footer Start
---*/
+
   #footer .block {
     padding-bottom: 20px;
   }
@@ -101,9 +76,7 @@ px      68    160    252    344    436    528    620    712    */
     padding-bottom: 10px;
     padding-left: 10px;
   }
-  /*--
-    footer-bottom Start
---*/
+
   #footer-bottom .block .navbar-nav {
     float: inherit;
     width: 70%;
@@ -114,25 +87,13 @@ px      68    160    252    344    436    528    620    712    */
     padding-top: 0px;
   }
 
-  /*--
-    recipe Start
---*/
-
   .profile {
     float: left;
   }
 }
-/*		Mobile Layout: 320px.
-		Gutters: 24px.
-		Outer margins: 34px.
-		Inherits styles from: Default Layout.
----------------------------------------------
-cols    1     2      3
-px      68    160    252    */
+
 @media only screen and (max-width: 767px) {
-  /*--
-    custom heading Start
---*/
+
   .heading {
     text-align: center;
     font-size: 22px;
@@ -140,15 +101,11 @@ px      68    160    252    */
   .heading span {
     font-size: 28px;
   }
-  /*--
-    custom heading Start
---*/
+
   .title {
     text-align: left;
   }
-  /*--
-    nav Start
---*/
+
   nav {
     position: relative;
   }
@@ -189,28 +146,13 @@ px      68    160    252    */
     background: none;
   }
 
-
-  /*--
-    about-us Start
---*/
-  #about-us {
-    padding: 70px 0;
-  }
-  #about-us .block p {
-    padding: 40px 0px 0px;
-  }
-  /*--
-    custom title Start
---*/
   #title h2 {
     font-size: 20px;
   }
   #title h2 span {
     font-size: 25px;
   }
-  /*--
-    blog Start
---*/
+
   #blog .block ul {
     padding-bottom: 30px;
   }
@@ -241,14 +183,6 @@ px      68    160    252    */
   #blog .block ul li .content-right:after {
     display: none;
   }
-  #blog .block ul li .content-left {
-    float: none;
-    width: 100%;
-    padding: 20px 35px;
-  }
-  #blog .block ul li .content-left:after {
-    display: none;
-  }
   #blog .block .btn-more-info , .page-body .btn-more-info{
     float: none;
     margin: 30px auto;
@@ -258,19 +192,16 @@ px      68    160    252    */
     border-radius: 10px;
   }
 
-  /*--
-    subscribe Start
---*/
-  #subscribe .block h1 {
+  #about-us .block h1 {
     font-size: 30px;
   }
-  #subscribe .block h1 span {
+  #about-us .block h1 span {
     font-size: 25px;
   }
-  #subscribe .block form .form-group .input-group {
+  #about-us .block form .form-group .input-group {
     width: 100%;
   }
-  #subscribe .block form .form-group .input-group .form-control {
+  #about-us .block form .form-group .input-group .form-control {
     width: 100%;
     background: #fff;
     opacity: 0.9;
@@ -279,16 +210,13 @@ px      68    160    252    */
     border-radius: 0px;
     float: inherit;
   }
-  #subscribe .block form .form-group .input-group .input-group-addon {
+  #about-us .block form .form-group .input-group .input-group-addon {
     padding: 0px;
     border: none;
     background: none;
     display: block;
     margin-top: 20px;
   }
-  /*--
-    contact-us Start
---*/
   #contact-us {
     padding: 60px 0 0;
   }
@@ -298,9 +226,6 @@ px      68    160    252    */
     float: inherit;
   }
 
-  /*--
-    footer Start
---*/
   #footer .block {
     padding-bottom: 50px;
   }
@@ -314,9 +239,6 @@ px      68    160    252    */
     margin-right: 0px;
   }
 
-  /*--
-    footer-bottom Start
---*/
   #footer-bottom .block .navbar {
     display: none;
   }
