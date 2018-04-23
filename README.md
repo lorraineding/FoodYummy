@@ -67,6 +67,8 @@ c) in FoodYummy.wsgi
 8. You can also upload your own recipe and dish
 9. Enjoy! If any questions during installation, please contact us at **foodyummy307@gmail.com**
 
+
+
 	
 
 	

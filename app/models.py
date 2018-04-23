@@ -59,7 +59,7 @@ class User(db.Document):
 	recipe = db.ListField(ReferenceField('Recipe'))
 	dish = db.ListField(ReferenceField('Dish'))
 
-	following = db.ListField(ReferenceField('User'),default=[self],reverse_delete_rule=CASCADE)
+	following = db.ListField(ReferenceField('User'),reverse_delete_rule=CASCADE)
 	def __init__(self,**kwargs):
 		super(User, self).__init__(**kwargs)
 		if self.role is None:
