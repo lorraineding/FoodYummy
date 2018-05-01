@@ -68,8 +68,7 @@ c) in FoodYummy.wsgi
 9. Enjoy! If any questions during installation, please contact us at **foodyummy307@gmail.com**
 
 
-
-	
+![alt text](https://github.com/lorraineding/FoodYummy/blob/master/app/static/images/FoodYummy%20Capture.png)
 
 	
 
